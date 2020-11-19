@@ -1,0 +1,60 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    font-weight: $btn-font-weight;
+    
+    color: $body-color;
+    line-height: $btn-line-height;
+    text-align: center;
+    vertical-align: middle;
+    @include button-size($btn-padding-x ,$btn-padding-y,$btn-font-size,$border-radius);
+    border:$border-width solid transparent ;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: $btn-transition;
+    background-image: none;
+    &.disabled,
+    &[disabled] {
+        cursor:not-allowed;
+        box-shadow: none;
+        ///阻止容器里所有的子容器点击 pointer-events
+        > * {
+            pointer-events: none;
+        }
+    }
+}
+
+.btn-lg {
+    @include button-size($btn-padding-x-lg ,$btn-padding-y-lg,$btn-font-size-lg,$btn-border-radius-lg);
+}
+
+.btn-sm {
+    @include button-size($btn-padding-x-sm,$btn-padding-y-sm,$btn-font-size-sm,$border-radius-sm);
+}
+
+.btn-primary {
+    @include button-style($primary,$primary,$white)
+}
+
+.btn-danger {
+    @include button-style($danger,$danger,$white)
+}
+
+.btn-default {
+    @include button-style($white,$gray-400,$body-color,$white,$primary,$primary)
+}
+.btn-link {
+    font-weight: $font-weight-normal;
+    color:$btn-link-color;
+    text-decoration:$link-decoration ;
+    box-shadow: none;
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+    &:disabled,
+    &.disabled {
+        color: $btn-link-disabled-color;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,79 @@
+.tab-content {
+    margin: 30px;
+    border:1px solid #EBEBEB;
+    padding: $tab-item-padding-y $tab-item-padding-x;
+    border-radius: $tab-border-radius;
+    .flexBox {
+        display: flex;
+        .tab {
+     
+            list-style: none;
+            padding: 0;
+            margin:0;
+            display: flex;
+            border: $tab-border-width  solid #EBEBEB;
+            .tab-item {
+                 list-style: none;
+                 padding: $tab-item-padding-y $tab-item-padding-x ;
+                 transition:$tab-box-transition ; 
+                 &:hover,&:focus{
+                     color: $tab-item-active-color;
+                     cursor: pointer;
+                 }
+                 &.disabled,&:disabled {
+                    //  border-bottom: 0;
+                     pointer-events: none;
+                     cursor: default;
+                     color:$tab-item-disabled-color;
+                 }
+                 
+                
+             }
+             .tab-item-default {
+                //  transition:$tab-box-transition ; 
+                 &:hover,&:focus{
+                     border-bottom:$tab-item-active-border-width solid $tab-item-active-color ;
+                 }
+                 &.tab-item-default-active {
+                     color: $tab-item-active-color;
+                     border-bottom:$tab-item-active-border-width solid $tab-item-active-color;
+                 }
+             }
+             .tab-item-card {
+                //  border:$tab-border-width solid   #EBEBEB;
+                 border-top:$tab-border-width solid   #EBEBEB;
+                 border-left: $tab-border-width solid   #EBEBEB;
+                 border-bottom: $tab-border-width solid   #EBEBEB;
+                 &.tab-item-card-active {
+                     color:  $tab-item-active-color;
+                     border-bottom: 1px solid $white;
+                     box-shadow: $tab-item-card-active-box-shadow;
+                 }
+                 &.tab-item-card:first-child {
+                     border-top-left-radius:$tab-border-radius ;
+                 }
+                 &.tab-item-card:last-child {
+                    border-top-right-radius: $tab-border-radius;
+                    border-right: $tab-border-width solid   #EBEBEB;
+                 }
+                 &:hover {
+                     background-color: $tab-item-card-background-active;
+                 }
+             }
+     
+             &.tab-border {
+                 border:none;
+             }
+         }
+        .flexContent {
+            flex: 1;
+            border-bottom: $tab-border-width  solid #EBEBEB;
+        }
+    }
+ 
+    .content {
+        padding:$tab-item-padding-y 0 ;
+    }
+   
+}
+

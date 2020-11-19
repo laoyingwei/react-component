@@ -1,0 +1,157 @@
+.menu{
+    // position: relative;
+    // z-index: 999;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 30px;
+    border-bottom: $menu-border-width solid $menu-border-color ;
+    box-shadow: $menu-box-shadow;
+    >.menu-item {
+        padding: $menu-item-padding-y $menu-item-padding-x;
+        transition: $menu-transition;
+        &.menu-item-active,&:hover {
+            border-bottom: $menu-item-active-border-width solid $menu-item-active-color ;
+            color: $menu-item-active-color
+        }
+        &:hover,&:focus {
+           cursor: pointer;
+           text-decoration: none;
+        }
+        &.menu-item-disabled {
+            cursor: default;
+            pointer-events: none;
+            color:$menu-item-disabled-color ;
+        }
+    }
+    .submenu-item {
+        position: relative;
+        .sub-menu-title {
+            display: flex;
+            align-items: center;
+            .i-icon {
+                // transform: rotate(0);
+                // transition: rotate 2s ease;
+                transition: transform .2s  ease;
+                transform: rotate(0deg);
+                margin-left: 10px;
+                
+            }
+            .i-icon-vertical {
+                transform: rotate(90deg);
+            }
+            .i-icon-horizontal {
+                transform: rotate(180deg);
+            }
+
+        }
+      
+        // &:hover .i-icon {
+          
+        //     transform: rotate(90deg);
+        // }
+       
+        
+    }
+    .wrapper {
+       
+        .submenu {
+            // display: none;
+            // transform: scale(0);
+            // opacity: 1;
+            list-style: none;
+            padding-left: 0;
+            ///规定下面的子元素都不换行white-space
+            white-space: nowrap;
+            .menu-item {
+                
+                padding: $menu-item-padding-y $menu-item-padding-x;
+                cursor: default;
+                transition: $menu-transition;
+                ///父元素有hover 伪元素 子元素会受印象，触发指定颜色
+                color: $body-color;
+                &.menu-item-active, &:hover {
+                  color: $menu-item-active-color !important;
+                //   &.sub-icon-vertical-active:hover .i-icon {
+          
+                //     transform: rotate(90deg);
+                //   }
+                //     &.sub-icon-horizontal-active:hover .i-icon {
+                
+                //     transform: rotate(180deg);
+                //  }
+                }
+                &:hover,&:focus {
+                    cursor: pointer;
+                    text-decoration: none;
+                 }
+                 &.menu-item-disabled {
+                     cursor: default;
+                     pointer-events: none;
+                     color:$menu-item-disabled-color ;
+                 }
+            }
+            &.menu-opened {
+                // display: block;
+            }
+        }
+        
+    }
+ 
+  
+
+    
+    
+  
+}
+
+
+.menu-horizontal {
+    >.menu-item {
+      border-bottom: $menu-item-active-border-width solid transparent;
+    }
+    .wrapper {
+        position: absolute;
+        z-index: 999;
+        top: calc(100% + 8px);
+        left: 0;
+        height: 120px;
+        background-color: $white;
+        overflow: hidden;
+        box-shadow: $submenu-box-shadow;
+        border: $menu-border-width solid  $menu-border-color;
+        .submenu {
+           
+          
+            box-shadow: $submenu-box-shadow;
+            border: $menu-border-width solid  $menu-border-color;
+            // transition:$menu-transition ;
+        }
+    }
+    
+}
+
+.menu-vertical {
+    flex-direction: column;
+    border-bottom: 0px;
+    border-left:$menu-border-width solid $menu-border-color ;
+    >.menu-item {
+        padding: $menu-item-padding-y $menu-item-padding-x;
+        border-left: $menu-item-active-border-width solid transparent ;
+        &.menu-item-active,&:hover {
+            border-bottom:0px ;
+            border-left: $menu-item-active-border-width solid $menu-item-active-color ;
+            color: $menu-item-active-color
+
+        }
+
+    }
+   
+}
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+@include zoomAnimation('top',scaleY(0),scaleY(1),center top);
+@include zoomAnimation('bottom',scaleY(0),scaleY(1),center bottom);
+@include zoomAnimation('left',scale(.45,.45),scale(1),top left);
+@include zoomAnimation('right',scale(.45,.45),scale(1),top right);
+
+
+@include popAnimation('top', scale(0) , scale(1) ,center top);
+@include popAnimation('left', scaleX(0) ,scaleX(1) ,center left);
+@include popAnimation('right', scaleX(0) ,scaleX(1) ,center right);
+@include popAnimation('bottom', scale(0) ,scale(1) ,center bottom);
+@include popAnimation('center',scale(0) ,scale(1) ,center)
+// @include Animation('top',scale(0),scale(1),center top, 'scale');
+// @include Animation('bottom',scale(0),scale(1),center bottom,'scale');
+// @include Animation('left',scale(.45,.45),scale(1),top left,'scale');
+// @include Animation('right',scale(.45,.45),scale(1),top right, 'scale');
+
+
+// .zoom-in-top-appear {
+//   opacity: 0;
+//   transform: scaleY(0);
+// }
+// .zoom-in-top-enter-appear {
+//   opacity: 1;
+//   transform: scaleY(1);
+//   transition: transform 300ms cubic-bezier(0.23,1,0.32,1) 100ms,opacity 300ms cubic-bezier(0.23,1,0.32,1) 100ms;
+//   transform-origin: center top;
+// }
+
+
+// .zoom-in-top-enter {
+//     opacity: 0;
+//     transform: scaleY(0);
+// }
+// .zoom-in-top-enter-active {
+//     opacity: 1;
+//     transform: scaleY(1);
+//     transition: transform 300ms cubic-bezier(0.23,1,0.32,1) 100ms,opacity 300ms cubic-bezier(0.23,1,0.32,1) 100ms;
+//     transform-origin: center top;
+// }
+
+// .zoom-in-top-exit {
+//     opacity: 1;
+  
+// }
+// .zoom-in-top-exit-active {
+//     opacity: 0;
+//     transform: scaleY(0);
+//     transition: transform 300ms cubic-bezier(0.23,1,0.32,1) 100ms,opacity 300ms cubic-bezier(0.23,1,0.32,1) 100ms;
+//     transform-origin: center top;
+// }
+
+
+// .alert-enter {
+//   opacity: 0;
+
+//   transform: scaleY(0);
+// }
+// .alert-enter-active {
+//   opacity: 1;
+//   transform: scaleY(1);
+//   transition: opacity 300ms, transform 300ms;
+//   transform-origin:center top;
+// }
+// .alert-exit {
+//   opacity: 1;
+//   transform: scaleY(1);
+// }
+// .alert-exit-active {
+//   opacity: 0;
+//   transform: scaleY(0);
+//   transition: opacity 300ms, transform 300ms;
+//   transform-origin:center top;
+// }

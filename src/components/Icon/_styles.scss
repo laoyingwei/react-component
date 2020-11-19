@@ -1,0 +1,13 @@
+.i-icon {
+  
+   @each $key,$val in $theme-colors {
+       &.icon-theme-#{$key} {
+          color: $val;
+       }
+   }
+  
+  
+}
+// .icon-theme-primary {
+//     color: map-get($theme-colors, 'primary' );
+// }

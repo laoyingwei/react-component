@@ -1,0 +1,44 @@
+{
+  "id": "2180289",
+  "name": "react-components",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7674905",
+      "name": "提示",
+      "font_class": "tishi",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "113537",
+      "name": "叹号",
+      "font_class": "warn",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "7712738",
+      "name": "success",
+      "font_class": "success",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    },
+    {
+      "icon_id": "1048888",
+      "name": "错误",
+      "font_class": "icon_wrong",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "4550303",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+.alertContent {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    .alert {
+        border-radius: $alert-border-radius;
+        box-shadow: $alert-box-shadow;
+        padding:$alert-padding-y $alert-padding-x;
+        position: relative;
+      
+        // margin-left: -150px;
+        width: 300px;
+        color: $white;
+        &::before,&::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+        
+        .alert-left-icon {
+            float: left;
+            // position: absolute;
+            // top: 50%;
+            // left: $alert-padding-x;
+            // transform: translateY(-53%);
+            // width: 50px;
+            // margin-top: .6rem;
+            // margin-right: .6rem;
+            .iconfont {
+                font-size: $icon-size-lg;
+            }
+        }
+        .alert-right-content {
+            width: 90%;
+            float: right;
+            display: inline-block;
+            .alert-top {
+                font-size:$font-size-base ;
+                // letter-spacing: $font-letter-spacing-sm ;
+                
+                // zoom: 1;
+                .alert-title {
+                   display: inline-block;
+                   font-weight:$font-weight-bold ;
+                //    word-spacing: 2px;
+                 
+                  
+                }
+                .alert-close-icon {
+                    display: inline-block;
+                    cursor: pointer;
+                    float: right;
+                    height: 100%;
+                    vertical-align: middle;
+                    font-size:$icon-size-base;
+                    vertical-align: center;
+                    // margin-top: .1rem;
+                    .iconfont {
+                        font-size:$icon-size-sm;
+                    }
+                }
+                &::before,&::after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+                
+                
+            }
+            
+            .alert-info {
+                font-size:$font-size-sm ;
+                color: darken($white,.5%);
+                width: 100%;
+                word-wrap: break-word;
+                margin-top: .25rem;
+            }
+        }
+       
+    }
+
+}
+
+.alert-success {
+   @include alertBackgroundColor($green)
+}
+
+.alert-default {
+    @include alertBackgroundColor($primary)
+}
+
+.alert-danger {
+    @include alertBackgroundColor($danger)
+}
+
+.alert-warning  {
+    @include alertBackgroundColor($warning)
+}
+
+
