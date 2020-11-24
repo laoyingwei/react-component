@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{FC,ButtonHTMLAttributes,AnchorHTMLAttributes,ReactNode}from 'react'
 import classNames from 'classnames'
 // import './_styles.scss'
 
@@ -18,18 +18,18 @@ export interface BaseButtonProps {
     disabled?: boolean,
     size?: ButtonSize,
     btnType?:ButtonType,
-    children:React.ReactNode,
+    children:ReactNode,
     href?:string,
 }
 
 ////ButtonHTMLAttributes<> 泛型的接口 
-type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>
+type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
 
-type AnthorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>
+type AnthorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
 ///Partial把属性都变成可选的
 export type ButtonProps = Partial<NativeButtonProps & AnthorButtonProps>
 
-export const Button:React.FC<ButtonProps> = (props) => {
+export const Button:FC<ButtonProps> = (props) => {
     const  { 
         className,
         disabled,
@@ -55,9 +55,9 @@ export const Button:React.FC<ButtonProps> = (props) => {
     }
 }
 
-Button.defaultProps = {
+ Button.defaultProps = {
     disabled:false,
     btnType:ButtonType.Default
 }
 
-export default Button
+export default Button;

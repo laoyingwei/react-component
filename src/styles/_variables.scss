@@ -178,7 +178,7 @@ $border-radius-sm:            .2rem !default;
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+$box-shadow-inset:            inset 0 0px 2px rgba($black, .075) !default;
 
 // 按钮
 // 按钮基本属性
@@ -260,52 +260,113 @@ $tab-border-radius: .4rem !default;
 $tab-item-card-background-active: $gray-100;
 
 //input
-$input-padding-y:                       $btn-padding-y !default;
-$input-padding-x:                       $btn-padding-x !default;
-$input-font-family:                     $btn-font-family !default;
-$input-font-size:                       $btn-font-size !default;
-$input-font-weight:                     $font-weight-base !default;
-$input-line-height:                     $btn-line-height !default;
 
-$input-padding-y-sm:                    $btn-padding-y-sm !default;
-$input-padding-x-sm:                    $btn-padding-x-sm !default;
-$input-font-size-sm:                    $btn-font-size-sm !default;
+///正常情况下的input
+$input-padding-y: $btn-padding-y !default;
+$input-padding-x: $btn-padding-x !default;
+$input-font-family: $btn-font-family !default;
+$input-font-size: $btn-font-size !default;
+$input-font-weight: $font-weight-base !default;
+$input-line-height: $btn-line-height !default;
 
-$input-padding-y-lg:                    $btn-padding-y-lg !default;
-$input-padding-x-lg:                    $btn-padding-x-lg !default;
-$input-font-size-lg:                    $btn-font-size-lg !default;
+///小的input 
 
-$input-bg:                              $white !default;
-$input-disabled-bg:                     $gray-200 !default;
-$input-disabled-border-color:           null !default;
+$input-padding-y-sm: $btn-padding-y-sm !default;
+$input-padding-x-sm: $btn-padding-x-sm !default;
+$input-font-size-sm: $btn-font-size-sm !default;
 
-$input-color:                           $gray-700 !default;
-$input-border-color:                    $gray-400 !default;
-$input-border-width:                    $border-width !default;
-$input-box-shadow:                      $box-shadow-inset !default;
+///大的input 
 
-$input-border-radius:                   $border-radius !default;
-$input-border-radius-lg:                $border-radius-lg !default;
-$input-border-radius-sm:                $border-radius-sm !default;
+$input-padding-y-lg: $btn-padding-y-lg !default;
+$input-padding-x-lg: $btn-padding-x-lg !default;
+$input-font-size-lg: $btn-font-size-lg !default;
 
-$input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              lighten($primary, 25%) !default;
-$input-focus-width:                     .2rem !default;
-$input-focus-color:                     $input-color !default;
-$input-focus-shadow-color:              rgba($primary, .25) !default;
-$input-focus-box-shadow:                0 0 0 $input-focus-width $input-focus-shadow-color !default;
+///定义完尺寸在定义背景颜色
+
+$input-bg: $white !default;
+$input-disabled-bg: $gray-200 !default;
+$input-disabled-border-color: null !default;
+
+///定义完背景颜色在定义字体颜色 和 边框颜色
+
+$input-color: $gray-700 !default;
+$input-border-color: $gray-400 !default;
+$input-border-width: $border-width !default;
+$input-shadow:  $box-shadow-inset !default;
+
+///定义边框弧度
+$input-border-radius: $border-radius !default;
+$input-border-radius-lg: $border-radius-lg !default;
+$input-border-radius-s: $border-radius-sm !default;
+
+///定义聚焦时的样式
+
+// $input-foucs-bg: $input-bg !default;
+// $input-focus-border-color: lighten($primary,25%) !default;
+// $input-focus-width: .2rem !default;
+// $input-focus-color: $input-color !default;
+// $input-focus-shadow-color: rgba($primary,.25) !default;
+// $input-focus-box-shadow: 0 0 0 $input-focus-width $input-focus-shadow-color !default;
+
 
 $input-placeholder-color:               $gray-600 !default;
 $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
 
-
 $input-transition:                      border-color .3s ease-in-out, box-shadow .3s ease-in-out !default;
 
 $input-group-addon-color:               $input-color !default;
 $input-group-addon-bg:                  $gray-200 !default;
 $input-group-addon-border-color:        $input-border-color !default;
+
+
+// $input-padding-y:                       $btn-padding-y !default;
+// $input-padding-x:                       $btn-padding-x !default;
+// $input-font-family:                     $btn-font-family !default;
+// $input-font-size:                       $btn-font-size !default;
+// $input-font-weight:                     $font-weight-base !default;
+// $input-line-height:                     $btn-line-height !default;
+
+// $input-padding-y-sm:                    $btn-padding-y-sm !default;
+// $input-padding-x-sm:                    $btn-padding-x-sm !default;
+// $input-font-size-sm:                    $btn-font-size-sm !default;
+
+// $input-padding-y-lg:                    $btn-padding-y-lg !default;
+// $input-padding-x-lg:                    $btn-padding-x-lg !default;
+// $input-font-size-lg:                    $btn-font-size-lg !default;
+
+// $input-bg:                              $white !default;
+// $input-disabled-bg:                     $gray-200 !default;
+// $input-disabled-border-color:           null !default;
+
+// $input-color:                           $gray-700 !default;
+// $input-border-color:                    $gray-400 !default;
+// $input-border-width:                    $border-width !default;
+// $input-box-shadow:                      $box-shadow-inset !default;
+
+// $input-border-radius:                   $border-radius !default;
+// $input-border-radius-lg:                $border-radius-lg !default;
+// $input-border-radius-sm:                $border-radius-sm !default;
+
+$input-focus-bg:                        $input-bg !default;
+$input-focus-border-color:              lighten($primary, 25%) !default;
+$input-focus-width:                     .1rem !default;
+$input-focus-color:                     $input-color !default;
+$input-focus-shadow-color:              rgba($primary, .25) !default;
+$input-focus-box-shadow:                0 0 0 $input-focus-width $input-focus-shadow-color !default;
+
+// $input-placeholder-color:               $gray-600 !default;
+// $input-plaintext-color:                 $body-color !default;
+
+// $input-height-border:                   $input-border-width * 2 !default;
+
+
+// $input-transition:                      border-color .3s ease-in-out, box-shadow .3s ease-in-out !default;
+
+// $input-group-addon-color:               $input-color !default;
+// $input-group-addon-bg:                  $gray-200 !default;
+// $input-group-addon-border-color:        $input-border-color !default;
 
 // Progress bars
 
